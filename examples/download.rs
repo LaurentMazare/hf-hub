@@ -1,10 +1,9 @@
 #[cfg(not(feature = "ureq"))]
-#[cfg(not(feature="tokio"))]
-fn main() {
-}
+#[cfg(not(feature = "tokio"))]
+fn main() {}
 
 #[cfg(feature = "ureq")]
-#[cfg(not(feature="tokio"))]
+#[cfg(not(feature = "tokio"))]
 fn main() {
     let api = hf_hub::api::sync::Api::new().unwrap();
 
@@ -17,7 +16,7 @@ fn main() {
 #[cfg(feature = "tokio")]
 #[tokio::main]
 async fn main() {
-    let api = hf_hub::api::tokio::Api::new().unwrap();
+    let api = candle_hf_hub::api::tokio::Api::new().unwrap();
 
     let _filename = api
         .model("meta-llama/Llama-2-7b-hf".to_string())

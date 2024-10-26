@@ -1,6 +1,6 @@
 [package]
-name = "hf-hub"
-version = "0.3.2"
+name = "candle-hf-hub"
+version = "0.3.3"
 edition = "2021"
 homepage = "https://github.com/huggingface/hf-hub"
 license = "Apache-2.0"
